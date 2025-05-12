@@ -1,0 +1,33 @@
+# requirements-dev.txt
+# =========================================
+# Herramientas para desarrollo, testing, calidad, documentación y profiling.
+# Para instalar en entorno de desarrollo.
+# =========================================
+
+# Pruebas automáticas y cobertura
+pytest
+pytest-cov
+tox
+
+# Linter y formato
+flake8
+black
+isort
+mypy
+yapf
+
+# Pre-commit hooks y seguridad
+pre-commit
+bandit
+
+# Documentación y notebooks
+sphinx
+sphinx-rtd-theme
+
+# Debugging y profiling
+ipython
+memory-profiler
+line-profiler
+
+# Herramientas extra para experimentación
+pdbpp
