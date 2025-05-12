@@ -1,1 +1,187 @@
+# Repo_IA - Documentación General  
+**Versión: v0.0.0.1**  
+**Fecha:** 2025-05-12  
+**Creador:** MCsn130  
 
+---
+
+## Sistema de versiones
+
+El sistema de versiones de Repo_IA utiliza cuatro números para indicar el estado y estabilidad del proyecto:
+
+- **Primer número:** versión oficial (mayor)
+- **Segundo número:** versión beta (características importantes en pruebas)
+- **Tercer número:** versión alfa (cambios experimentales, pruebas internas)
+- **Cuarto número:** versión de prueba o hotfix (cambios menores, bugfixes, pruebas rápidas)
+
+**Ejemplo:**  
+`v1.23.4.15`  
+- 1 = versión oficial estable  
+- 23 = cambios significativos en beta  
+- 4 = iteración alfa  
+- 15 = prueba/hotfix más reciente
+
+---
+
+## Índice
+
+1. [Visión general](#visión-general)
+2. [Novedades de la versión](#novedades-de-la-versión)
+3. [Instalación y requisitos](#instalación-y-requisitos)
+4. [Primeros pasos y uso básico](#primeros-pasos-y-uso-básico)
+5. [Personalización y experimentación](#personalización-y-experimentación)
+6. [Estructura del proyecto](#estructura-del-proyecto)
+7. [Preguntas frecuentes (FAQ)](#preguntas-frecuentes-faq)
+8. [Contribuciones y comunidad](#contribuciones-y-comunidad)
+9. [Roadmap y futuros objetivos](#roadmap-y-futuros-objetivos)
+10. [Historial de versiones](#historial-de-versiones)
+11. [Contacto y créditos](#contacto-y-créditos)
+
+---
+
+## Visión general
+
+**Repo_IA** es tu propia inteligencia artificial local, 100% personalizable, modificable y gratuita. Diseñada para que puedas experimentar, aprender, mejorar y compartir, sin depender de servicios externos ni perder el control sobre tus datos.
+
+- IA local y modular
+- Privacidad total
+- Uso educativo, creativo y profesional
+- Comunidad abierta y colaborativa
+
+---
+
+## Novedades de la versión
+
+- Primera versión de prueba pública (v0.0.0.1).
+- Instalador automático y soporte multiplataforma.
+- Arquitectura lista para plugins y módulos personalizados.
+- Documentación en constante expansión.
+
+---
+
+## Instalación y requisitos
+
+### Requisitos del sistema
+
+- **Python** 3.10 o superior
+- pip actualizado
+- 4GB RAM mínimo (8GB recomendado)
+- Sistemas compatibles: Windows, Linux, macOS
+
+### Instalación
+
+1. Clona el repositorio:
+    ```sh
+    git clone https://github.com/MCsn130/repo_ia.git
+    cd repo_ia
+    ```
+2. Instala todas las dependencias:
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. **(Opcional)** Instala dependencias de desarrollo:
+    ```sh
+    pip install -r requirements-dev.txt
+    ```
+4. Ejecuta el Setup:
+    ```sh
+    python setup.py
+    ```
+
+---
+
+## Primeros pasos y uso básico
+
+- Inicia Repo_IA:
+    ```sh
+    python main.py
+    ```
+- Cambia de perfil, idioma o módulo:
+    ```sh
+    python main.py --profile tu_usuario --lang es --plugin chat
+    ```
+- Explora plugins:
+    ```sh
+    python main.py --list-plugins
+    ```
+
+**Recuerda:** Todo funciona localmente, ¡tu privacidad está asegurada!
+
+---
+
+## Personalización y experimentación
+
+- Agrega nuevos plugins en `plugins/`
+- Modifica la configuración en `config.yaml`
+- Cambia respuestas y lenguajes en la carpeta `lang/`
+- Crea perfiles personalizados y ajusta los módulos a tus necesidades
+
+¿Tienes una idea loca? ¡Pruébala! Comparte tus mejoras con la comunidad.
+
+---
+
+## Estructura del proyecto
+
+```
+repo_ia/
+├── main.py
+├── setup.py
+├── requirements.txt
+├── requirements-dev.txt
+├── plugins/
+├── lang/
+├── core/
+├── utils/
+├── config.yaml
+└── docs/
+```
+
+---
+
+## Preguntas frecuentes (FAQ)
+
+- **¿Por qué falla la instalación de X?**  
+  Verifica tu versión de Python y pip. Consulta la sección de errores comunes o pregunta en la comunidad.
+- **¿Puedo ejecutar Repo_IA sin conexión?**  
+  ¡Sí! Todo funciona localmente.
+- **¿Cómo reporto un bug o sugiero una mejora?**  
+  Abre un issue en GitHub o contacta directamente.
+
+---
+
+## Contribuciones y comunidad
+
+- Haz fork y crea una rama para tu aporte.
+- Sigue las guías de estilo (ver requirements-dev.txt).
+- Envía un Pull Request claro y explica tu mejora.
+- Participa en el chat, issues y roadmap.
+
+**¡Toda idea cuenta!**
+
+---
+
+## Roadmap y futuros objetivos
+
+- [ ] Plugins para más lenguajes/modelos
+- [ ] Mejoras de interfaz y visualización
+- [ ] Tutoriales y ejemplos avanzados
+- [ ] Encuentros y lanzamientos de comunidad
+
+---
+
+## Historial de versiones
+
+- **v0.0.0.1** - Lanzamiento inicial, setup automático, base para plugins y documentación.
+
+---
+
+## Contacto y créditos
+
+**Creador:** MCsn130  
+- Instagram: [@hernancossini130p](https://instagram.com/hernancossini130p)
+- Gmail: cossinih@gmail.com
+
+Agradecimientos a la comunidad y a todos quienes contribuyen.
+
+---
+```
