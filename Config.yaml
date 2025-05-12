@@ -1,0 +1,239 @@
+# Repo_IA - Configuración avanzada (config.yaml)
+# ¡1001% personalizable y mejorable! Modifica, expande, hackea y comparte.
+# Cualquier sección puede ser extendida o sobreescrita por archivos secundarios (config_local.yaml, config_{perfil}.yaml, etc).
+
+# === Información general ===
+app:
+  nombre: Repo_IA
+  version: 0.0.0.1
+  descripcion: "IA local modular, ética y expandible"
+  idioma: es
+  modo: local            # local | servidor | nube | experimental | headless
+  debug: false
+  entorno: desarrollo    # desarrollo | produccion | test | demo
+  multiusuario: true
+  log_nivel: info        # debug | info | warning | error | critical
+  interfaz: cli          # cli | web | gui | api | todos
+
+# === Internacionalización y localización ===
+idiomas:
+  activo: es
+  disponibles: [es, en, fr, pt, it, de, zh, jp, custom]
+  fallback: en
+  auto_detectar: true
+  traducciones_custom: "./lang/custom/"
+
+# === Perfiles de usuario ===
+usuarios:
+  por_defecto: default
+  lista:
+    - nombre: default
+      roles: [admin, dev]
+      idioma: es
+      tema: oscuro
+      avatar: "img/default.png"
+      preferencias:
+        notificaciones: true
+        auto_guardado: true
+        historial_comandos: true
+        acceso_avanzado: true
+    - nombre: invitado
+      roles: [user]
+      idioma: en
+      tema: claro
+      preferencias:
+        notificaciones: false
+        acceso_avanzado: false
+    # Puedes añadir ilimitados perfiles
+
+# === Seguridad y privacidad ===
+seguridad:
+  cifrado:
+    activo: true
+    algoritmo: AES-256
+    clave_maestra: "CAMBIA_ESTO"
+    rotacion_automatica: true
+  autenticacion:
+    tipo: local
+    max_intentos: 5
+    bloqueo_temporal: 300 # segundos
+    doble_factor: opcional
+  privacidad:
+    modo_anonimo: false
+    limpiar_logs: true
+    uso_telemetria: false
+    compartir_datos: false
+
+# === Modelos y módulos principales ===
+modelos:
+  lenguaje:
+    activo: transformers
+    opciones: [spacy, transformers, nltk, openai, custom]
+    parametros:
+      max_tokens: 2048
+      temperatura: 0.7
+      top_k: 50
+      top_p: 0.95
+      uso_gpu: auto
+      modelo_custom: ""
+  vision:
+    activo: opencv
+    opciones: [opencv, pillow, scikit-image, torch-vision, custom]
+    parametros:
+      resolucion: "auto"
+      modo_detalle: false
+  audio:
+    activo: speechrecognition
+    opciones: [speechrecognition, pyttsx3, librosa, whisper, custom]
+    parametros:
+      idioma: auto
+      modo_susurro: false
+  clasificacion:
+    activo: scikit-learn
+    opciones: [scikit-learn, xgboost, lightgbm, catboost, custom]
+    parametros:
+      n_estimators: 100
+      max_depth: 8
+      random_state: 42
+
+# === Plugins, extensiones y hooks ===
+plugins:
+  activos: [chat, resumen, traduccion, voz, vision]
+  disponibles: auto
+  rutas_personalizadas: ["./plugins/", "./extensiones/"]
+  auto_recarga: true
+  hooks:
+    pre_comando: []
+    post_comando: []
+    error: []
+    # Puedes inyectar scripts de eventos aquí
+
+# === Rutas e infraestructura ===
+rutas:
+  modelos: "./modelos"
+  datos: "./data"
+  plugins: "./plugins"
+  logs: "./logs"
+  cache: "./cache"
+  temp: "./tmp"
+  perfiles: "./users"
+  configs: "./config"
+  static: "./static"
+  lang: "./lang"
+  backups: "./backups"
+  notebooks: "./notebooks"
+  custom: []
+
+# === API y servicios externos ===
+api:
+  activar: false
+  modo: rest        # rest | websocket | rpc | custom
+  puerto: 8080
+  clave: "CAMBIA_ESTO"
+  https: false
+  cors: "*"
+  doc_url: "/docs"
+  version: v1
+  rutas_extra: []
+  webhooks: []
+
+servicios_externos:
+  openai:
+    activo: false
+    api_key: ""
+    modelo: "gpt-3.5-turbo"
+  huggingface:
+    activo: false
+    token: ""
+    modelo: "distilbert-base-uncased"
+  custom_services: []
+
+# === Integración, automatización y scripting ===
+automatizacion:
+  activar: true
+  scripts_inicio: ["scripts/startup.py"]
+  scripts_cierre: ["scripts/shutdown.py"]
+  tareas_programadas:
+    - nombre: backup_diario
+      script: "scripts/backup.py"
+      cron: "0 3 * * *"
+      activo: true
+    - nombre: limpiar_cache
+      script: "scripts/clean_cache.py"
+      cron: "0 */6 * * *"
+      activo: true
+
+# === Experimentos, features y banderas ===
+features:
+  modo_experimento: true
+  beta_features: [live_edit, auto_reload, ai_assistant, visual_debug]
+  alfa_features: []
+  flags:
+    permitir_plugins_terceros: true
+    usar_gpu_experimental: true
+    modo_benchmark: false
+    logs_detallados: true
+
+# === Personalización visual e interfaz ===
+ui:
+  tema: oscuro         # oscuro | claro | retro | custom
+  fuente: "Fira Code"
+  tamaño_fuente: 14
+  animaciones: true
+  ascii_art: true
+  banner: "Bienvenido a Repo_IA"
+  logo_custom: "./static/logo.png"
+  color_acento: "#00FFA3"
+  accesibilidad:
+    modo_alto_contraste: false
+    soporte_lector_pantalla: true
+
+# === Logging, debugging y monitorización ===
+logging:
+  nivel: info
+  formato: "[%(asctime)s] %(levelname)s: %(message)s"
+  guardar_en_archivo: true
+  archivo: "./logs/app.log"
+  rotacion: diaria
+  max_archivos: 10
+  enviar_a_monitor: false
+
+monitoring:
+  activar: true
+  modo: local
+  alerta_errores: true
+  metrics_export: false
+
+# === Opciones avanzadas y hacks ===
+avanzado:
+  permitir_hacks: true
+  auto_patch: true
+  custom_patch_files: []
+  auto_reload_modulos: true
+  safe_mode: false
+  modo_legacy: false
+  inyeccion_codigo: true
+
+# === Variables de entorno y overrides ===
+env:
+  cargar_env: true
+  archivo: ".env"
+  overrides: ["config_local.yaml", "config_test.yaml"]
+
+# === Documentación, ayuda y changelogs ===
+docs:
+  mostrar_ayuda_al_inicio: true
+  ruta_docs: "./docs/"
+  changelog: "./docs/changelog.md"
+  feedback_rapido: true
+
+# === TODO y expansión personalizada ===
+TODO:
+  - "Agregar integración con Calendario"
+  - "Mejorar documentación multi-idioma"
+  - "Plugins de visualización avanzada"
+  - "Sistema de permisos granular"
+  - "Modo colaborativo multiusuario"
+  - "IA explicativa para logs y errores"
+
+# === ¡Expande, personaliza y programa todo lo que quieras! ===
