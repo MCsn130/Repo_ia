@@ -1,0 +1,109 @@
+# requirements.txt
+# =========================================
+# Repo_IA: Tu IA local, libre y legendaria
+# Instala TODO lo que puedes necesitar para IA, ciencia de datos,
+# automatización, web, visión, audio y mucho más.
+# El Setup instalará todas estas dependencias automáticamente.
+# Puedes usar solo las básicas, ¡pero tienes todo para experimentar!
+# =========================================
+
+# === BÁSICAS: IA y Ciencia de datos ===
+numpy
+pandas
+scipy
+scikit-learn
+tqdm
+joblib
+h5py
+
+# === Machine Learning y Deep Learning ===
+torch
+torchvision
+xgboost
+lightgbm
+catboost
+transformers
+sentencepiece
+spacy
+nltk
+gensim
+
+# === Procesamiento de texto y NLP ===
+langdetect
+fuzzywuzzy
+beautifulsoup4
+lxml
+textblob
+pyspellchecker
+
+# === Visión artificial e imágenes ===
+opencv-python
+Pillow
+imageio
+scikit-image
+pytesseract
+
+# === Audio y voz ===
+SpeechRecognition
+pyttsx3
+pyaudio
+soundfile
+librosa
+
+# === Visualización y dashboards ===
+matplotlib
+seaborn
+plotly
+streamlit
+gradio
+dash
+
+# === Web, APIs y scraping ===
+requests
+httpx
+flask
+fastapi
+aiohttp
+selenium
+
+# === Base de datos y almacenamiento ===
+sqlalchemy
+tinydb
+pymongo
+redis
+pysqlite3
+
+# === Plugins, CLI y configuración ===
+click
+importlib-metadata
+python-dotenv
+pydantic
+ruamel.yaml
+toml
+
+# === Seguridad y cifrado ===
+cryptography
+pyjwt
+
+# === Serialización y formatos ===
+msgpack
+ujson
+
+# === Automatización y experimentación ===
+pyautogui
+faker
+factory_boy
+hypothesis
+
+# === Notebooks y documentación ===
+jupyter
+notebook
+jupyterlab
+
+# === Otros útiles/experimentales ===
+markdown2
+pyfiglet
+rich
+yapf
+
+# ==== Si agregas algo más, documéntalo en el README! ====
